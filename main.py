@@ -86,7 +86,7 @@ async def play_radio(ctx, r_name):
         data = json.load(f)
 
     if r_name in data:
-        abssa = FFmpegPCMAudio(data[r_name], executable='/ffmpeg')
+        abssa = FFmpegPCMAudio(data[r_name], executable='.nixpacks/ffmpeg')
         vc.play(abssa)
 
         while vc.is_playing():
