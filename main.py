@@ -54,7 +54,7 @@ async def play(ctx, *args):
 
 
     # Создаем плеер и запускаем проигрывание аудио
-    abssa =  FFmpegPCMAudio(filename, executable='/ffmpeg')
+    abssa =  FFmpegPCMAudio(filename, executable='ffmpeg')
     vc.play(abssa)
 
     # Ждем, пока аудио не закончится
