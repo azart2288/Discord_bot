@@ -54,7 +54,7 @@ async def play(ctx, *args):
 
 
     # Создаем плеер и запускаем проигрывание аудио
-    abssa =  FFmpegPCMAudio(filename, executable='ffmpeg')
+    abssa =  FFmpegPCMAudio(filename, executable='/ffmpeg')
     vc.play(abssa)
 
     # Ждем, пока аудио не закончится
@@ -86,7 +86,7 @@ async def play_radio(ctx, r_name):
         data = json.load(f)
 
     if r_name in data:
-        abssa = FFmpegPCMAudio(data[r_name], executable='ffmpeg')
+        abssa = FFmpegPCMAudio(data[r_name], executable='/ffmpeg')
         vc.play(abssa)
 
         while vc.is_playing():
