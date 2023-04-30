@@ -2,3 +2,4 @@ discord
 ffmpeg
 requests
 PyNaCl
+os
